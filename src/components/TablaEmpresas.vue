@@ -51,18 +51,110 @@
 		</div>
 	</div>
 	<div v-else>
-		<div class="formulario">
-			<label>NOMBRE:</label><input v-model="datox.nombre" type="text" placeholder="Nombre de contacto"><br>
-			<label>RAZON:</label><input v-model="datox.razon" type="text" placeholder="Razon"><br>
-			<label>RUC:</label><input v-model="datox.ruc" type="text" placeholder="RUC"><br>
-			<label>CELULAR:</label><input v-model="datox.celular" type="text" placeholder="Celular de contacto"><br>
-			<label>CORREO:</label><input v-model="datox.correo" type="text" placeholder="Correo de contacto"><br>
-			<label>DIRECCION:</label><input v-model="datox.direccion" type="email" placeholder="Dirección"><br>
-			<label>DEPARTAMENTO:</label><input v-model="datox.departamento" type="text" placeholder="Departamento"><br>
-			<label>PROVINCIA:</label><input v-model="datox.provincia" type="text" placeholder="Provincia"><br>
-			<label>DISTRITO:</label><input v-model="datox.distrito" type="text" placeholder="Distrito"><br>
-			<label>COMENTARIO:</label><input v-model="datox.comentario" type="text" placeholder="Comentario"><br>
-			<button v-on:click="fetchEditarEmpresa">Guardar</button>
+		<div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s uk-child-width-1-1 uk-flex-center">
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Nombre:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.nombre" type="text" placeholder="Nombre de contacto">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Razon:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.razon" type="text" placeholder="Razon">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Ruc:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.ruc" type="text" placeholder="RUC">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Celular:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.celular" type="text" placeholder="Celular de contacto">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Correo:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.correo" type="text" placeholder="Correo de contacto">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Direccion:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.direccion" type="email" placeholder="Dirección">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Departamento:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.departamento" type="text" placeholder="Departamento">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Provincia:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.provincia" type="text" placeholder="Provincia">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Distrito:</label>
+					</div>
+					<div>
+						<input class="uk-input uk-form-width-medium uk-form-small" v-model="datox.distrito" type="text" placeholder="Distrito">
+					</div>
+				</div>
+			</div>
+			<div class="uk-text-center uk-grid uk-child-width-1-1 pad3">
+				<div class="uk-child-width-1-1">
+					<div class="uk-text-center">
+						<label class="uk-text-large labelx">Comentario:</label>
+					</div>
+					<div>
+						<textarea row="3" class="uk-input uk-form-width-medium uk-form-small" v-model="datox.comentario" type="text" placeholder="Comentario"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-margin uk-text-center">
+			<button class="uk-button uk-button-secondary" v-on:click="fetchEditarEmpresa">Guardar</button>
 		</div>
 	</div>
 </template>
@@ -184,5 +276,13 @@
 
 	.btn-actualizar:hover{
 		background-color: rgb(0, 255, 149);
+	}
+
+	.labelx{
+		color: white;
+	}
+
+	.pad3{
+		margin-top: 15px;
 	}
 </style>

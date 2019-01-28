@@ -1,6 +1,6 @@
 <template>
 	<div class="uk-position-relative uk-margin-medium">
-		<div v-if="!admin" class="fullHouse uk-text-center">
+		<div v-if="!admin" class="fullHouse uk-text-center uk-padding">
 			<br><br>
 			<br><br>
 			<div class="uk-flex-center uk-child-width-1-4@m uk-child-width-1-2@s uk-child-width-1-1 uk-text-center" uk-grid>
